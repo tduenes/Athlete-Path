@@ -1,0 +1,83 @@
+<!-- Language Selector -->
+<div class="flex justify-end p-4 space-x-2">
+  <button onclick="setLang('en')" class="px-3 py-1 border rounded">English</button>
+  <button onclick="setLang('es')" class="px-3 py-1 border rounded">Español</button>
+</div>
+
+<!-- Hero Section with new mission statement -->
+<section class="relative bg-cover bg-center text-white py-20 px-6 text-center" style="background-image: url('https://i.imgur.com/QjHYqmZ.jpeg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en>Athlete Path</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-es>Athlete Path</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mt-4" data-en>
+      Helping Mexican student-athletes unlock their full potential by competing in college sports and pursuing academic excellence in the U.S.
+    </p>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mt-4" data-es>
+      Ayudamos a estudiantes-atletas mexicanos a desarrollar su máximo potencial compitiendo en deportes universitarios y alcanzando la excelencia académica en EE. UU.
+    </p>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section class="py-16 px-6 max-w-4xl mx-auto text-center">
+  <h2 class="text-3xl font-semibold mb-4" data-en>About Us</h2>
+  <h2 class="text-3xl font-semibold mb-4" data-es>Sobre Nosotros</h2>
+  <p class="text-lg leading-relaxed mb-6" data-en>
+    As former Mexican student-athletes, we understand the recruiting journey firsthand. Our mission is to provide clear guidance, personal support, and a proven process — so athletes can compete at the highest level of their sport while continuing their academic careers.
+  </p>
+  <p class="text-lg leading-relaxed mb-6" data-es>
+    Como ex estudiantes-atletas mexicanos, entendemos el proceso de reclutamiento de primera mano. Nuestra misión es brindar orientación clara, apoyo personalizado y un proceso comprobado para que los atletas puedan competir al más alto nivel mientras continúan sus estudios académicos.
+  </p>
+  <img src="https://i.imgur.com/F1h4Xtc.jpeg" alt="Athlete portrait" class="rounded-lg mx-auto shadow-lg w-full max-w-xl">
+</section>
+
+<!-- Services Section (unchanged) -->
+<section class="bg-gray-100 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-center" data-en>What We Offer</h2>
+    <h2 class="text-3xl font-semibold mb-6 text-center" data-es>Lo que ofrecemos</h2>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
+      <li class="flex items-start space-x-3" data-en>✅ <span>One-on-One Advising – Step-by-step help through the recruiting process</span></li>
+      <li class="flex items-start space-x-3" data-es>✅ <span>Asesoría personalizada – ayuda paso a paso en el proceso de reclutamiento</span></li>
+      <li class="flex items-start space-x-3" data-en>🎥 <span>Highlight Video Guidance – Tips to showcase your talent to coaches</span></li>
+      <li class="flex items-start space-x-3" data-es>🎥 <span>Guía para video de highlights – recomendaciones para mostrar tu talento a entrenadores</span></li>
+      <li class="flex items-start space-x-3" data-en>📄 <span>Academic & Application Support – Help with transcripts and eligibility</span></li>
+      <li class="flex items-start space-x-3" data-es>📄 <span>Apoyo académico y de solicitudes – ayuda con expedientes académicos y elegibilidad</span></li>
+      <li class="flex items-start space-x-3" data-en>🌍 <span>Coach Outreach – We contact college coaches on your behalf</span></li>
+      <li class="flex items-start space-x-3" data-es>🌍 <span>Conexión con entrenadores – contactamos entrenadores universitarios por ti</span></li>
+      <li class="flex items-start space-x-3" data-en>🧭 <span>Real Experience – Learn from someone who has done it</span></li>
+      <li class="flex items-start space-x-3" data-es>🧭 <span>Experiencia real – aprende de alguien que ya lo logró</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section (connected to Formspree) -->
+<section class="py-16 px-6 max-w-4xl mx-auto">
+  <h2 class="text-3xl font-semibold mb-4 text-center" data-en>Contact Us</h2>
+  <h2 class="text-3xl font-semibold mb-4 text-center" data-es>Contáctanos</h2>
+  
+  <form action="https://formspree.io/f/xqalyejg" method="POST" class="space-y-4">
+    <input type="text" name="name" placeholder="Full Name / Nombre completo" class="w-full border p-3 rounded" required>
+    <input type="email" name="email" placeholder="Email Address / Correo electrónico" class="w-full border p-3 rounded" required>
+    <textarea name="message" placeholder="Your message / Tu mensaje" rows="5" class="w-full border p-3 rounded" required></textarea>
+
+    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700" data-en>Send Message</button>
+    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700" data-es>Enviar mensaje</button>
+  </form>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-blue-600 text-white text-center py-6">
+  <p>&copy; 2025 Athlete Path. All rights reserved. | Todos los derechos reservados.</p>
+</footer>
+
+<!-- Language Toggle Script -->
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+    document.querySelectorAll('[data-es]').forEach(el => el.style.display = lang === 'es' ? '' : 'none');
+  }
+  setLang('en');
+</script>
