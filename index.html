@@ -4,19 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Athlete Path</title>
-  <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans">
 
-  <!-- Language Selector -->
-  <div class="flex justify-end p-4 space-x-2">
-    <button onclick="setLang('en')" class="px-3 py-1 border rounded">English</button>
-    <button onclick="setLang('es')" class="px-3 py-1 border rounded">Español</button>
+  <!-- Logo + Language Selector -->
+  <div class="flex items-center justify-between px-6 pt-4">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="https://raw.githubusercontent.com/tduenes/Athlete-Path/main/ChatGPT%20Image%205%20ago%202025,%2009_13_28%20a.m..png" alt="Athlete Path Logo" class="h-12 w-auto rounded shadow">
+      <span class="text-2xl font-bold">Athlete Path</span>
+    </div>
+
+    <!-- Language Buttons -->
+    <div class="space-x-2">
+      <button onclick="setLang('en')" class="px-3 py-1 border rounded">English</button>
+      <button onclick="setLang('es')" class="px-3 py-1 border rounded">Español</button>
+    </div>
   </div>
 
   <!-- Hero Section -->
-  <section class="relative bg-cover bg-center text-white min-h-[500px] flex items-center justify-center px-6" style="background-image: url('https://i.imgur.com/QjHYqmZ.jpeg');">
+  <section class="relative bg-cover bg-center text-white min-h-[500px] flex items-center justify-center px-6 mt-4" style="background-image: url('https://i.imgur.com/QjHYqmZ.jpeg');">
     <div class="absolute inset-0 bg-black bg-opacity-70"></div>
     <div class="relative z-10 text-center max-w-3xl">
       <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en>Athlete Path</h1>
@@ -30,7 +38,7 @@
     </div>
   </section>
 
-  <!-- About Us Section -->
+  <!-- About Section -->
   <section class="py-16 px-6 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-semibold mb-4" data-en>About Us</h2>
     <h2 class="text-3xl font-semibold mb-4" data-es>Sobre Nosotros</h2>
@@ -43,57 +51,50 @@
     <img src="https://i.imgur.com/F1h4Xtc.jpeg" alt="Athlete portrait" class="rounded-lg mx-auto shadow-lg w-full max-w-xl">
   </section>
 
-  <!-- Services Section -->
+  <!-- What We Offer Section -->
   <section class="bg-gray-100 py-16 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold mb-10 text-center" data-en>What We Offer</h2>
-    <h2 class="text-3xl font-bold mb-10 text-center hidden" data-es>Lo que ofrecemos</h2>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 text-center" data-en>What We Offer</h2>
+      <h2 class="text-3xl font-bold mb-10 text-center hidden" data-es>Lo que ofrecemos</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      <!-- Service 1 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-2" data-en>One-on-One Advising</h3>
-        <h3 class="text-xl font-semibold mb-2 hidden" data-es>Asesoría Personalizada</h3>
-        <p data-en>Step-by-step guidance through the recruiting process from someone who’s already done it. Personalized strategies based on your goals and timeline.</p>
-        <p class="hidden" data-es>Orientación personalizada en cada paso del proceso de reclutamiento. Estrategias hechas a la medida según tus metas y tiempos.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2" data-en>One-on-One Advising</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-es>Asesoría Personalizada</h3>
+          <p data-en>Step-by-step guidance through the recruiting process from someone who’s already done it. Personalized strategies based on your goals and timeline.</p>
+          <p class="hidden" data-es>Orientación personalizada en cada paso del proceso de reclutamiento. Estrategias hechas a la medida según tus metas y tiempos.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2" data-en>Highlight Video Guidance</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-es>Guía para Video de Highlights</h3>
+          <p data-en>Tips and structure to help you create a video that showcases your talent and gets attention from coaches.</p>
+          <p class="hidden" data-es>Consejos y estructura para crear un video que muestre tu talento y llame la atención de los entrenadores.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2" data-en>Academic & Application Support</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-es>Apoyo Académico y de Solicitudes</h3>
+          <p data-en>We help you gather transcripts, navigate eligibility requirements, and complete college applications the right way.</p>
+          <p class="hidden" data-es>Te ayudamos a conseguir documentos, cumplir requisitos de elegibilidad y completar solicitudes universitarias correctamente.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2" data-en>Coach Outreach</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-es>Contacto con Entrenadores</h3>
+          <p data-en>We help identify the right programs and send professional messages to coaches on your behalf to open doors.</p>
+          <p class="hidden" data-es>Identificamos programas adecuados y enviamos mensajes profesionales a entrenadores por ti para abrir oportunidades.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2" data-en>Real Experience & Mentorship</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-es>Experiencia Real y Mentoría</h3>
+          <p data-en>Get advice from someone who walked this path — from Mexico to college sports in the U.S. — and wants to help you do the same.</p>
+          <p class="hidden" data-es>Consejos de alguien que ya vivió esta experiencia: de México al deporte universitario en EE.UU., y quiere ayudarte a lograrlo.</p>
+        </div>
       </div>
-
-      <!-- Service 2 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-2" data-en>Highlight Video Guidance</h3>
-        <h3 class="text-xl font-semibold mb-2 hidden" data-es>Guía para Video de Highlights</h3>
-        <p data-en>Tips and structure to help you create a video that showcases your talent and gets attention from coaches.</p>
-        <p class="hidden" data-es>Consejos y estructura para crear un video que muestre tu talento y llame la atención de los entrenadores.</p>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-2" data-en>Academic & Application Support</h3>
-        <h3 class="text-xl font-semibold mb-2 hidden" data-es>Apoyo Académico y de Solicitudes</h3>
-        <p data-en>We help you gather transcripts, navigate eligibility requirements, and complete college applications the right way.</p>
-        <p class="hidden" data-es>Te ayudamos a conseguir documentos, cumplir requisitos de elegibilidad y completar solicitudes universitarias correctamente.</p>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-2" data-en>Coach Outreach</h3>
-        <h3 class="text-xl font-semibold mb-2 hidden" data-es>Contacto con Entrenadores</h3>
-        <p data-en>We help identify the right programs and send professional messages to coaches on your behalf to open doors.</p>
-        <p class="hidden" data-es>Identificamos programas adecuados y enviamos mensajes profesionales a entrenadores por ti para abrir oportunidades.</p>
-      </div>
-
-      <!-- Service 5 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-2" data-en>Real Experience & Mentorship</h3>
-        <h3 class="text-xl font-semibold mb-2 hidden" data-es>Experiencia Real y Mentoría</h3>
-        <p data-en>Get advice from someone who walked this path — from Mexico to college sports in the U.S. — and wants to help you do the same.</p>
-        <p class="hidden" data-es>Consejos de alguien que ya vivió esta experiencia: de México al deporte universitario en EE.UU., y quiere ayudarte a lograrlo.</p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section class="py-16 px-6 max-w-4xl mx-auto">
@@ -120,9 +121,10 @@
       document.querySelectorAll('[data-en]').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
       document.querySelectorAll('[data-es]').forEach(el => el.classList.toggle('hidden', lang !== 'es'));
     }
-    setLang('en'); // default
+    setLang('en');
   </script>
 
 </body>
 </html>
+
 
